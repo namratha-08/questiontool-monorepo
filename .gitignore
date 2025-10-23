@@ -1,0 +1,41 @@
+# Eclipse
+.metadata/
+.project
+.classpath
+.settings/
+
+# Maven / Java
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Spring Boot / Maven wrapper
+mvnw
+mvnw.cmd
+.mvn/
+
+# Node / front-end (if any)
+node_modules/
+
+# IDE specific
+.vscode/
+
+# Temporary files
+*.tmp
+*.swp
