@@ -1,41 +1,25 @@
 # Eclipse
 .metadata/
-.project
-.classpath
-.settings/
+*.tmp
+*.bak
+.recommenders/
 
-# Maven / Java
+# Build / target
 target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
+build/
 
-# IntelliJ
-.idea/
-*.iml
-out/
+# IDE files
+*.classpath
+*.project
+*.settings/
 
-# OS files
+# Tomcat temp
+.wtpwebapps/
+*.log
+
+# OS
 Thumbs.db
 .DS_Store
 
-# Logs
-*.log
-
-# Spring Boot / Maven wrapper
-mvnw
-mvnw.cmd
-.mvn/
-
-# Node / front-end (if any)
-node_modules/
-
-# IDE specific
-.vscode/
-
-# Temporary files
-*.tmp
-*.swp
+# OneDrive / local caches
+*.orig

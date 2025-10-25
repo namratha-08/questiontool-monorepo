@@ -1,36 +1,54 @@
 package com.ntt.questiontool.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.util.ArrayList;
+import java.util.List;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Question {
     private int id;
+    private Integer courseId;
+    private Integer languageId;
+    private String title;
+    private String body;
+    private String type;
+    private String difficulty;
+    private String metadata;
+    private String createdAt;
+
+    // legacy fields (optional)
     private String questionText;
-    private String optionA;
-    private String optionB;
-    private String optionC;
-    private String optionD;
+    private String optionA, optionB, optionC, optionD;
     private String correctAnswer;
     private String language;
 
+    // NEW: options list
+    private List<Option> options = new ArrayList<>();
+
+    // --- getters / setters for existing fields ---
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
+    public Integer getCourseId() { return courseId; }
+    public void setCourseId(Integer courseId) { this.courseId = courseId; }
+    public Integer getLanguageId() { return languageId; }
+    public void setLanguageId(Integer languageId) { this.languageId = languageId; }
+    public String getTitle() { return title; }
+    public void setTitle(String title) { this.title = title; }
+    public String getBody() { return body; }
+    public void setBody(String body) { this.body = body; }
+    public String getType() { return type; }
+    public void setType(String type) { this.type = type; }
+    public String getDifficulty() { return difficulty; }
+    public void setDifficulty(String difficulty) { this.difficulty = difficulty; }
+    public String getMetadata() { return metadata; }
+    public void setMetadata(String metadata) { this.metadata = metadata; }
+    public String getCreatedAt() { return createdAt; }
+    public void setCreatedAt(String createdAt) { this.createdAt = createdAt; }
 
-    public String getQuestionText() { return questionText; }
-    public void setQuestionText(String questionText) { this.questionText = questionText; }
+    // options getter / setter
+    public List<Option> getOptions() { return options; }
+    public void setOptions(List<Option> options) { this.options = options; }
 
-    public String getOptionA() { return optionA; }
-    public void setOptionA(String optionA) { this.optionA = optionA; }
-
-    public String getOptionB() { return optionB; }
-    public void setOptionB(String optionB) { this.optionB = optionB; }
-
-    public String getOptionC() { return optionC; }
-    public void setOptionC(String optionC) { this.optionC = optionC; }
-
-    public String getOptionD() { return optionD; }
-    public void setOptionD(String optionD) { this.optionD = optionD; }
-
-    public String getCorrectAnswer() { return correctAnswer; }
-    public void setCorrectAnswer(String correctAnswer) { this.correctAnswer = correctAnswer; }
-
-    public String getLanguage() { return language; }
-    public void setLanguage(String language) { this.language = language; }
+    // (optional) getters/setters for legacy fields if you used them
+    // ...
 }
