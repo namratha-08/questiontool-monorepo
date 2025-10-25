@@ -23,3 +23,8 @@ Thumbs.db
 
 # OneDrive / local caches
 *.orig
+
+/questiontool-web/build/
+/questiontool-web/src/main/webapp/WEB-INF/lib/
+/Servers/
+*.class
